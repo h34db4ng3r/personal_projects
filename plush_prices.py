@@ -30,7 +30,7 @@ class SoftPlush:
         if x > 0:
             return x - 0.01
         else:
-            return x
+            return 0
 
     def name(self):
         return '{} {}'.format(self.size, self.animal)
@@ -53,9 +53,9 @@ class SoftPlush:
 
 
 plush_1 = SoftPlush('bear', 'small', 9.5645)
-plush_2 = SoftPlush('Lion', 'large', 14.4)
+plush_2 = SoftPlush('Lion', 'large', 0)
 plush_3 = SoftPlush('Cat', 'medium', 11)
-plush_4 = SoftPlush('dog', 'medium', 0)
+plush_4 = SoftPlush('dog', 'medium', -10)
 
 plush_1.request_plush()
 plush_2.request_plush()
