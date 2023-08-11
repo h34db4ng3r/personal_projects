@@ -1,6 +1,5 @@
 import math
 
-
 """
 - This code returns a new price based on vendor prices
 - gives the plush a new name based on type of animal, and size
@@ -33,17 +32,27 @@ class SoftPlush:
     def name(self):
         return '{} {}'.format(self.size, self.animal)
 
+    def lowercase_name(self):
+        x = self.name()
+        return x.lower()
+
     def request_plush(self):
         x = self.final_price()
+        y = self.price
+        z = self.street_value()
+        w = self.lowercase_name()
+
         print()
-        print(self.name())
-        print('Price from vendor: {}'.format(self.price))
-        print('Price that makes business sense: {}'.format((self.street_value())))
-        print('Price that makes sense: {}'.format(self.final_price()))
+        print(w)
+        print('Price from vendor:', y)
+        print('Price that makes business sense:', z)
+        print('Price that makes sense for the shelf:', x)
 
 
-plush_1 = SoftPlush('bear', 'small', 9)
+plush_1 = SoftPlush('bear', 'small', 9.5645)
 plush_2 = SoftPlush('Lion', 'large', 14.4)
+plush_3 = SoftPlush('Cat', 'medium', 11)
 
 plush_1.request_plush()
 plush_2.request_plush()
+plush_3.request_plush()
