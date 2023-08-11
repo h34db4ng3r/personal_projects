@@ -1,10 +1,12 @@
-"""
+import math
 
+
+"""
 - This code returns a new price based on vendor prices
-- gives the plushies a new name based on type of animal, and size
-- and makes the prices make more sense to a consumer
-
+- gives the plush a new name based on type of animal, and size
+- and makes the prices more attractive ( ending in .99 )
 """
+
 
 class SoftPlush:
     def __init__(self, animal, size, price):
@@ -17,39 +19,31 @@ class SoftPlush:
         new_price = round(street_price, 2)
         return new_price
 
-
-"""
-
-    I need this to take in the new value of the plush
-    and give it a new price
-    the new price should end with 9.99
-    and if the price is in the hundreds it should end with 99.99
-    and should scale accordingly
-
-"""
-
-    def pretty_prices(self):
+    def whole_number(self):
         x = self.street_value()
-        
+        ceil_x = math.ceil(x)
+        rinse = math.ceil(ceil_x / 10)
+        bring_up = rinse * 10
+        return bring_up
 
-        return x
-
+    def final_price(self):
+        x = self.whole_number()
+        return x - 0.01
 
     def name(self):
         return '{} {}'.format(self.size, self.animal)
+
+    def request_plush(self):
+        x = self.final_price()
+        print()
+        print(self.name())
+        print('Price from vendor: {}'.format(self.price))
+        print('Price that makes business sense: {}'.format((self.street_value())))
+        print('Price that makes sense: {}'.format(self.final_price()))
 
 
 plush_1 = SoftPlush('bear', 'small', 9)
 plush_2 = SoftPlush('Lion', 'large', 14.4)
 
-print(plush_1.size)
-print(plush_2.size)
-
-
-print(plush_2.street_value())
-
-print(plush_1.name())
-
-print(plush_1.price)
-print(plush_1.street_value())
-print(plush_1.pretty_prices())
+plush_1.request_plush()
+plush_2.request_plush()
