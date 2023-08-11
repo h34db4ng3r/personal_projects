@@ -1,11 +1,5 @@
 import math
 
-"""
-- This code returns a new price based on vendor prices
-- gives the plush a new name based on type of animal, and size
-- and makes the prices more attractive ( ending in .99 )
-"""
-
 
 class SoftPlush:
     def __init__(self, animal, size, price):
@@ -47,9 +41,9 @@ class SoftPlush:
 
         print()
         print(w)
-        print('Price from vendor:', y)
-        print('Price that makes business sense:', z)
-        print('Price that makes sense for the shelf:', x)
+        print(f'Price from vendor: {y},-')
+        print(f'Price that makes business sense: {z},-')
+        print(f'Price that makes sense for the shelf: {x},-')
 
 
 plush_1 = SoftPlush('bear', 'small', 9.5645)
@@ -61,3 +55,11 @@ plush_1.request_plush()
 plush_2.request_plush()
 plush_3.request_plush()
 plush_4.request_plush()
+
+
+"""
+
+it would be nice for a solution for the values that are equal to or below zero,
+f.ex taking the size and approximating a value based on that, ( hashmap / dict )
+
+"""
