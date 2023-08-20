@@ -14,7 +14,7 @@ html {
    }
 
 body {
-    padding: 3rem;
+    padding: 2rem;
 }
 
 
@@ -42,7 +42,6 @@ a:hover {
 .title {
     font-size: 3rem;
     letter-spacing: 0.5rem;
-    padding: 1rem;
     padding-left: 0;
     text-align: left;
 }
@@ -50,21 +49,26 @@ a:hover {
 
 fieldset {
     border-style: none;
-    margin-top: 7rem;
+    margin-top: 6rem;
     width: 60%;
 }
 
 
 legend {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    color: #26bebe;
 }
 
 
 .home, div {
-    padding-top: 3rem;
+    padding-top: 2rem;
 }
 
 .end {
-    height: 1000px;
+    height: 2000px;
+}
+
+
+img {
+    width: 400px;
 }
